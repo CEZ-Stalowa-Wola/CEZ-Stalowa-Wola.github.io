@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">  
+  <meta name="description" content="Centrum Edukacji Zawodowej w Stalowej Woli. Kształcimy przyszłych profesjonalistów. Z nami zdobędziesz wymarzony zawód. ">
+  <meta name="keywords" content="CEZ Stalowa Wola,CEZ stw,technikum">
+  <meta property="og:title" content="Centrum Edukacji Zawodowej w Stalowej Woli"/>
+  <title>Centrum Edukacji Zawodowej w Stalowej Woli</title>
+</head>
+<body>
+    <div class="p-4 bg-primary text-white text-center">
+      <img src="Images/bud_cez.jpg" alt="Zdjęcie z lotu ptaka pokazujące cały budynek Cez wraz z orlikiem" class="bud_cez">
+        <h1>C E Z</h1>
+        <p class="subtitle"><strong>C</strong>entrum <strong>E</strong>dukacji <strong>Z</strong>awodowej w <strong>S</strong>talowej <strong>W</strong>oli</p> 
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">Menu</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="recruitment\recruitment.html" target="_blank">Rekrutacja</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Gallery/gallery.html" target="_blank">Galeria</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Szkoła
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="team/index.html" target="_blank">Kadra</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/opieka_pedagogiczna/opieka_pedagogiczna.html" target="_blank">Opieka pedagogiczna</a></li> 
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="gms\gms.html" target="_blank">Gabinet Medycyny Szkolnej</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Rodo</a></li> 
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Osiągnięcia</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Patron Szkoły</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Egzamin maturalny</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Egzamin zawodowy</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Kwalifikacyjne kursy zawodowe</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  E-szkoła
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="https://ckpstw.webd.pl/n1/plan/u" target="_blank">Plan lekcji</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://bip.cez.stalowowolski.pl/" target="_blank">BIP</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://epuap.gov.pl/wps/portal" target="_blank">EPUAP</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://ckpstw.webd.pl/n1/sdnws" target="_blank">Dostępność</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://login.microsoftonline.com/" target="_blank">Office 365</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Różności
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#" target="_blank">Erasmus+</a></li> 
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://ckpstw.webd.pl/n1" target="_blank">Archiwum</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Uczeń z pasją</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Sport</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Kreatywnie zakręceni</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Kreatywny fryzjer</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Kącik UNICEF</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">DBI</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://m000468.molnet.mol.pl/" target="_blank">Biblioteka</a></li>
+                </ul>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="offcanvas" href="#partnership" role="button" aria-controls="offcanvasExample">Działamy z</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Szukaj..." aria-label="Search" maxlength="22">
+              <button class="btn btn-outline-success" type="submit">Szukaj</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="partnership" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Działamy razem z:</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>Szkoła współpracuje z wieloma instucjami oraz zakładami pracy dzięki ,którym uczniowie mają możliwość rozwoju i odbywać praktyki.</p>
+          <div class="canvasimages">
+              <img src="Images/logo-powiat.png" class="LP" alt="Logo Powiatu Stalowowolskiego">
+              <img src="Images/logoKO.png" class="KO" alt="Logo Podkarpackiego Kuratorium Oświaty w Rzeszowie">
+              <img src="Images/1-1.png" alt="">
+              <img src="Images/1-2.png" alt="">
+              <img src="Images/1-3.png" alt="">
+              <img src="Images/2-1.png" alt="">
+              <img src="Images/2-2.png" alt="">
+              <img src="Images/2-3.png" alt="">
+              <img src="Images/3-1.png" alt="">
+              <img src="Images/3-2.png" alt="">
+              <img src="Images/3-3.png" alt="">
+              <img src="Images/4-1.png" alt="">
+              <img src="Images/4-2.png" alt="">
+              <img src="Images/5-1.png" alt="">
+              <img src="Images/5-2.png" alt="">
+              <img src="Images/5-3.png" alt="">
+              <img src="Images/6-1.png" alt="">
+              <img src="Images/6-2.png" alt="">
+              <img src="Images/7.png" alt="">
+              <img src="Images/8-1.png" alt="">
+              <img src="Images/8-2.png" alt="">
+              <img src="Images/9-1.png" alt="">
+              <img src="Images/9-2.png" alt="">
+              <img src="Images/9-3.png" alt="">
+              <img src="Images/9-4.png" alt="">
+              <img src="Images/10-1.png" alt="">
+              <img src="Images/10-2.png" alt="">
+              <img src="Images/10-3.png" alt="">
+              <img src="Images/11-1.png" alt="">
+              <img src="Images/11-2.png" alt="">
+              <img src="Images/11-3.png" alt="">
+              <img src="Images/11-4.png" alt="">
+              <img src="Images/12-1.png" alt="">
+              <img src="Images/12-2.png" alt="">
+              <img src="Images/12-3.png" alt="">
+              <img src="Images/12-4.png" alt="">
+              <img src="Images/12-5.png" alt="">
+              <img src="Images/13-1.png" alt="">
+              <img src="Images/13-2.png" alt="">
+              <img src="Images/13-3.png" alt="">
+              <img src="Images/14-1.png" alt="">
+              <img src="Images/15-1.png" alt="">
+              <img src="Images/15-2.png" alt="">
+              <img src="Images/16-1.png" alt="">
+              <img src="Images/16-2.png" alt="">
+              <img src="Images/16-3.png" alt="">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="d-flex justify-content-center">
+        <div class="card">
+          <h4>Witam</h4>
+          <div class="card-body">
+            <p class="card-text">Witam na nieoficjalnej stronie Centrum Edukacji Zawodowej. 
+              </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <div class="card">
+            <h4>Świąteczny Dzień Otwarty CEZ</h4>
+            <img class="card-img-top" src="Images/dni-otwarte-2023.png" alt="Plakat dni otwartych">
+            <div class="card-body">
+              <p class="card-text">
+              </div>
+          </div>
+          </div>
+      
+      <div class="d-flex justify-content-center">
+      <div class="card">
+        <h4>250-lecie KEN w CEZ</h4>
+        <img class="card-img-top" src="Images/IMG_2219.jpg" alt="zdięcie z apelu z okazji 250 lecia KEN w CEZ">
+        <div class="card-body">
+          <p class="card-text">„ Miarą kultury społeczeństwa jest szacunek okazywany stanowi nauczycielskiemu ”. Eliza Orzeszkowa
+
+            Już w czasach renesansu wielki reformator, pisarz i polityk Andrzej Frycz – Modrzewski w dziele „ O poprawie Rzeczpospolitej ” odwoływał się do tematu szkolnictwa i wyrażał szacunek dla pracy nauczyciela. W czasach oświecenia uchwałą sejmową 14 października 1773 roku ustanowiono i powołano Komisję Edukacji Narodowej powierzając jej całokształt prac związanych z organizacją szkolnictwa. Dziś szkoła jest nowoczesna, choć boryka się z wieloma problemami, ulega przekształceniom, ale ma też swoje osiągnięcia, radości.... Jest ogromną częścią naszego życia, naszą codziennością.</p>
+            <a href="250_KEN/ken.html" target="_blank" class="btn btn-primary ">Czytaj dalej</a>
+          </div>
+      </div>
+      </div>
+
+      <div class="d-flex justify-content-center">
+      <div class="card">
+        <h4>O mały włos...</h4>
+        <img class="card-img-top" src="Images/szachy-dyplom.png" alt="Zdjęcie pokazujące skład drużyny szachowej CEZ na turnieju">
+        <div class="card-body">
+          <p class="card-text">W dzniu 24 paździenika 2023 r. uczniowie naszej szkoły brali udział w Licealiadzie w turnieju szachowym. Z szesnastu rozegranych meczy, jedna zorgrywka zadecydowała o braku dalszego awansu - <strong>zajęliśmy III miejsce</strong>.
+          </p>
+          <a href="#" class="btn btn-primary ">Czytaj dalej</a>
+        </div>
+      </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="card">
+          <h4>Wycieczka klasowa – edukacja regionalna oraz spotkanie integracyjne</h4>
+          <img class="card-img-top" src="Images/20231011_100333.jpg" alt="Zdjęcie przedstawiające wycieczkę klasy 1 I">
+          <div class="card-body">
+            <p class="card-text">Dnia 11 października 2023 odbyła się wycieczka klasy 1I do Muzeum COP – Centralnego Okręgu Przemysłowego w Stalowej Woli. Wycieczka miała charakter edukacyjny, podczas której uczniowie mieli okazję doświadczenia historii i kultury 20-lecia miedzywojennego.</p>
+            <a href="/trip_1I/trip.html" target="_blank" class="btn btn-primary ">Czytaj dalej</a>
+          </div>
+        </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div class="card">
+            <h4>Wycieczka</h4>
+            <img class="card-img-top" src="Images/pk1.jpg" alt="Zdjęcie przedstawiające wycieczkę kals II I, IV KSP, V KP">
+            <div class="card-body">
+              <p class="card-text">W dniach 11-12 października klasy: II I, IV KSP, V KP wraz z opiekunami: Małgorzatą Stadnik, Piotrem Kręcichwostem, Barbarą Surmą i Anną Siembidą udały się na dwudniową wycieczkę do Oświęcimia i Zakopanego. Zwiedzaliśmy Auschwitz-Birkenau, jeden z największych, nazistowskich obozów koncentracyjnych. Przewodnicy w wzruszający sposób przedstawili wstrząsającą historię więźniów wielu narodowości. Zobaczyliśmy miejsca, które są świadectwem ludobójstwa XX wieku: prymitywne baraki, Blok Śmierci, Plac apelowy, komorę gazową, Ścianę Straceń, ruiny krematoriów. Wizyta w Miejscu Pamięci była unikatową lekcją, bo należy wiedzieć, że „Kto nie zna historii skazany jest na jej ponowne przeżycie”.</p>
+              <a href="/trip/trip.html" target="_blank" class="btn btn-primary ">Czytaj dalej</a>
+            </div>
+          </div>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="card">
+              <h4>17 października Dzień Arkusza Kalkulacyjnego</h4>
+                <img class="card-img-top" src="Images/excel.jpeg" alt="Grafika przedstawiająca program MS Excel">
+                <div class="card-body">
+                    <p class="card-text">Dlaczego <strong>Dzień Arkusza Kalkulacyjnego obchodzony jest 17 października</strong>? 🤔 To właśnie w tym dniu w 1978 roku wydany został pierwszy program do obsługi arkuszy kalkulacyjnych ”VisiCalc”. ✏️ Od tamtej pory arkusze kalkulacyjne stały się nieodłącznym narzędziem stosowanym w świecie biznesu. Królem wśród arkuszy jest MS Excel 📈📊📉 który znajduje się na co drugim komputerze na świecie!</p>
+                    <a href="DAK/dak.html" target="_blank" class="btn btn-primary ">Czytaj dalej</a>
+                  </div>
+            </div>
+        </div>        
+            <div class="d-flex justify-content-center">
+              <div class="card">
+                <h4>III miejsce w powiecie</h4>
+                  <img class="card-img-top" src="Images\mb-12-10-23a.jpg" alt="Zdjęcie pokazujące skład drużyny sztafety w licealiadzie ">
+                  <div class="card-body">
+                      <p class="card-text">Reprezentacja naszej szkoły zdobyła III miejsce w Powiatowej Licealiadzie w sztafetowych biegach przełajowych 6x800m.
+                        <br>
+                        Skład reprezentacji:
+                        <ul>
+                        <li>Paweł Igras 5EPP</li>
+                        <li>Sebastian Chmiel 2P</li>
+                        <li>Adam Rycerz 1P</li>
+                        <li>Mikołaj Saja 3MS</li>
+                        <li>Adrian Kuryś 2EK</li>
+                        <lf>Fabian Dereń 5IP</ul></p>
+                          <a href="" class="btn btn-primary ">Czytaj dalej</a>
+
+                  </div>
+              </div>
+          </div> 
+          
+          
+          <nav aria-label="Page_navigation" class="Page_navigation">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Poprzednie</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Następne</a></li>
+            </ul>
+          </nav>  
+          <!---
+          <span>  
+            <a href="#" class="arrow">
+              <svg width="40" height="40" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="m9.001 10.978h-3.251c-.412 0-.75-.335-.75-.752 0-.188.071-.375.206-.518 1.685-1.775 4.692-4.945 6.069-6.396.189-.2.452-.312.725-.312.274 0 .536.112.725.312 1.377 1.451 4.385 4.621 6.068 6.396.136.143.207.33.207.518 0 .417-.337.752-.75.752h-3.251v9.02c0 .531-.47 1.002-1 1.002h-3.998c-.53 0-1-.471-1-1.002zm7.506-1.5-4.507-4.751-4.507 4.751h3.008v10.022h2.998v-10.022z" fill-rule="nonzero"/>
+              </svg>
+            </a>
+          </span>
+        -->
+          <button onclick="topFunction()" id="myBtn"><svg width="40" height="40" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m9.001 10.978h-3.251c-.412 0-.75-.335-.75-.752 0-.188.071-.375.206-.518 1.685-1.775 4.692-4.945 6.069-6.396.189-.2.452-.312.725-.312.274 0 .536.112.725.312 1.377 1.451 4.385 4.621 6.068 6.396.136.143.207.33.207.518 0 .417-.337.752-.75.752h-3.251v9.02c0 .531-.47 1.002-1 1.002h-3.998c-.53 0-1-.471-1-1.002zm7.506-1.5-4.507-4.751-4.507 4.751h3.008v10.022h2.998v-10.022z" fill-rule="nonzero"/>
+          </svg></button>
+          <script>
+            let mybutton = document.getElementById("myBtn");
+
+            window.onscroll = function() {  
+              scrollFunction()};
+            
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+            
+            function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+
+            let text = 'Centrum Edukacji Zawodowej w Stalowej Woli';
+              let container = document.querySelector('.subtitle');
+container.textContent = '';
+
+function typeText(text, container, index = 0) {
+  if (index < text.length) {
+    container.textContent += text[index];
+    setTimeout(() => typeText(text, container, index + 1), 100);
+  }
+}
+    typeText(text, container);
+    
+    window.onload = function() {
+    var map = L.map('map').setView([50.55640187553773, 22.043080329895023], 18); 
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    var marker = L.marker([50.55640187553773, 22.043080329895023]).addTo(map); 
+  };
+            </script>
+            
+          
+      <footer class="footer" name="contact">
+        <div class="container">
+          Copyright © 2023 Centrum Edukacji Zawodowej. Wszelkie prawa zastrzeżone.
+            <div class="row">
+                <div class="col">
+                    <h5>Kontakt</h5>
+                    <ul>
+                        <li>Telefon: 15 8134854</li>
+                        <li>Telefon: 15 8428300</li>
+                        <li>Ulica: Kwiatkowskiego 1</li>
+                        <li>Miasto: Stalowa Wola</li>
+                        <li>Kod pocztowy: 37-450</li>
+                        <li>Email: <a href="mailto:sekretariat-cez@cezstalowawola.pl" class="mail">sekretariat-cez@cezstalowawola.pl</a></li>
+                        <li>NIP: 865-10-35-782</li>
+                    </ul>
+                </div>
+                <div class="col">
+                  <h5>Lokalizacja</h5>
+                  <div id="map"></div>
+              </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
