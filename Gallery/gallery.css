@@ -5,21 +5,12 @@
 
 h1 {
     font-size: 15rem;
+    letter-spacing: -15px;
   }
-/*
-.subtitle {
-    
-    white-space: nowrap;
-    animation: writing 4s ;
-  }
-  
-@keyframes writing {
-    from { width: 0; }
-    to { width: 100%; }
-  }*/
   
 @media (max-width: 600px) {
       h1 {
+        letter-spacing: normal;
         font-size: xx-large;
       }
   }
