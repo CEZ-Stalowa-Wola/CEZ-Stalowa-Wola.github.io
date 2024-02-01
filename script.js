@@ -39,6 +39,18 @@ attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap
 var marker = L.marker([50.55640187553773, 22.043080329895023]).addTo(map); 
 };
 
+let hidden = document.getElementsByClassName('hidden-cards');
+
+function show() {
+  for(let i = 0; i < hidden.length; i++) {
+  if(hidden[i].style.display == "block") {
+  hidden[i].style.display = "none";
+  } else {
+  hidden[i].style.display = "block";
+  }
+  }
+  }
+
 let links = document.getElementsByTagName('a');
 
 function toggleUnderline() {
