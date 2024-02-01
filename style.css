@@ -9,10 +9,12 @@ body{
 
 h1 {
     font-size: 15rem;
+    letter-spacing: -15px;
   }
   
 @media (max-width: 600px) {
       h1 {
+        letter-spacing: normal;
         font-size: xx-large;
       }
   }
@@ -83,11 +85,6 @@ h1 {
     left: 0;
     margin-bottom: 2rem;
 }
-/*
-.mobile-logo {
-    display: none; 
-}
-*/
 
 #accessibility , .offcanvas {
     background-color: white !important;
@@ -142,7 +139,7 @@ li {
     margin-left: 50vh;
     bottom: 90vh;
 }
-/*To je do button co był ,ale żem go usunoł */
+
 @media (max-width: 600px) {
     .btn-primary {
         margin-left: 25vh;
@@ -152,10 +149,28 @@ li {
     
 }
 
-.Page_navigation {
+.button-container {
     display: flex;
-    justify-content: center;
-    margin-top: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.show_more {
+    background-color: transparent;
+    border: none;
+    margin: 1.5rem auto 1.5rem auto;    
+    transition: transform 0.5s ease, box-shadow 0.1s ease; 
+    font-size: larger;
+}
+
+.show_more:hover {
+    transform: scale(1.1);
+}
+
+.hidden-cards {
+    display: none;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
 }
 
 #myBtn {
