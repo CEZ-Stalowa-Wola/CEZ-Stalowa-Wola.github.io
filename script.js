@@ -120,3 +120,10 @@ links[i].style.color = "yellow";
 }
 }
 }
+
+ function choose() {
+                var select = document.getElementById("lista");
+                var godzina = select.value;
+                var osoba = select.options[select.selectedIndex].text;
+                document.getElementById("pole").innerHTML = osoba + " " + "jest dostępna/y w" + " " + godzina ;
+              }
