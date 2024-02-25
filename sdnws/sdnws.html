@@ -7,7 +7,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-  <link rel="stylesheet" href="sdnws.css">
+  <link rel="stylesheet" href="/sdnws/sdnws.css">
   <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">  
   <meta name="description" content="Centrum Edukacji Zawodowej w Stalowej Woli. Kształcimy przyszłych profesjonalistów. Z nami zdobędziesz wymarzony zawód. ">
   <meta name="keywords" content="CEZ Stalowa Wola,CEZ stw,technikum">
@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class="p-4 bg-primary text-white text-center">
-      <img src="/Images/bud_cez.jpg" alt="Zdjęcie z lotu ptaka pokazujące cały budynek Cez wraz z orlikiem" class="bud_cez">
+      <img src="Images/bud_cez.jpg" alt="Zdjęcie z lotu ptaka pokazujące cały budynek Cez wraz z orlikiem" class="bud_cez">
         <h1>C E Z</h1>
         <h5 class="subtitle"></h5>
       </div>
@@ -30,13 +30,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/recruitment\recruitment.html" target="_blank">Rekrutacja</a>
+                <a class="nav-link" href="recruitment\recruitment.html" target="_blank">Rekrutacja</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Gallery/gallery.html" target="_blank">Galeria</a>
+                <a class="nav-link" href="Gallery/gallery.html" target="_blank">Galeria</a>
               </li>
 
               <li class="nav-item dropdown">
@@ -44,11 +44,11 @@
                   Szkoła
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/team/index.html" target="_blank">Kadra</a></li>
+                  <li><a class="dropdown-item" href="team/index.html" target="_blank">Kadra</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="/opieka_pedagogiczna/opieka_pedagogiczna.html" target="_blank">Opieka pedagogiczna</a></li> 
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="/gms/gms.html" target="_blank">Gabinet Medycyny Szkolnej</a></li>
+                  <li><a class="dropdown-item" href="gms\gms.html" target="_blank">Gabinet Medycyny Szkolnej</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#" target="_blank">Rodo</a></li> 
                   <li><hr class="dropdown-divider"></li>
@@ -74,7 +74,7 @@
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="https://epuap.gov.pl/wps/portal" target="_blank">EPUAP</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#" target="_blank">Dostępność</a></li>
+                  <li><a class="dropdown-item" href="/sdnws/sdnws.html" target="_blank">Dostępność</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="https://login.microsoftonline.com/" target="_blank">Office 365</a></li>
                 </ul>
@@ -198,8 +198,7 @@
 
     <div class="container-select">
        <select name='naucz' class='lista' id="lista">
-  <option selected='selected' disabled='disabled'>wybierz nauczyciela</option>
-  <option value="piątek o godz. 10:15 - 11:15 w sali 26w">Jan Bąk</option>
+        <option value="piątek o godz. 10:15 - 11:15 w sali 26w">Jan Bąk</option>
   <option value="piątek o godz. 14:00 - 15:00 w sali pokój nauczycielski/ sala 104">Wiesław Bednarczyk</option>
   <option value="środę o godz. 11:15 - 12:10 w sali pokój nauczycielski">Aneta Bedońska</option>
   <option value="środę o godz. 13:00 - 13:45 w sali pokój nauczycielski">Mariusz Bedoński</option>
@@ -298,6 +297,17 @@
     <p id="pole"></p>
 
       </div>
+
+    <script>
+
+            function choose() {
+                var select = document.getElementById("lista");
+                var godzina = select.value;
+                var osoba = select.options[select.selectedIndex].text;
+                document.getElementById("pole").innerHTML = osoba + " " + "jest dostępna/y w" + " " + godzina ;
+              }
+
+            </script>
 
   
          <script src="script.js"></script>
