@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="sdnws.css">
+  <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">  
+  <meta name="description" content="Centrum Edukacji Zawodowej w Stalowej Woli. Kształcimy przyszłych profesjonalistów. Z nami zdobędziesz wymarzony zawód. ">
+  <meta name="keywords" content="CEZ Stalowa Wola,CEZ stw,technikum">
+  <meta property="og:title" content="Centrum Edukacji Zawodowej w Stalowej Woli"/>
+  <title>Centrum Edukacji Zawodowej w Stalowej Woli</title>
+</head>
+<body>
+    <div class="p-4 bg-primary text-white text-center">
+      <img src="/Images/bud_cez.jpg" alt="Zdjęcie z lotu ptaka pokazujące cały budynek Cez wraz z orlikiem" class="bud_cez">
+        <h1>C E Z</h1>
+        <h5 class="subtitle"></h5> 
+      </div>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">Menu</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/recruitment\recruitment.html" target="_blank">Rekrutacja</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Gallery/gallery.html" target="_blank">Galeria</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Szkoła
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/team/index.html" target="_blank">Kadra</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/opieka_pedagogiczna/opieka_pedagogiczna.html" target="_blank">Opieka pedagogiczna</a></li> 
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Gabinet Medycyny Szkolnej</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Rodo</a></li> 
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Osiągnięcia</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Patron Szkoły</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Egzamin maturalny</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Egzamin zawodowy</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Kwalifikacyjne kursy zawodowe</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  E-szkoła
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="https://ckpstw.webd.pl/n1/plan/u" target="_blank">Plan lekcji</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://bip.cez.stalowowolski.pl/" target="_blank">BIP</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://epuap.gov.pl/wps/portal" target="_blank">EPUAP</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://ckpstw.webd.pl/n1/sdnws" target="_blank">Dostępność</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://login.microsoftonline.com/" target="_blank">Office 365</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Różności
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#" target="_blank">Erasmus+</a></li> 
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://ckpstw.webd.pl/n1" target="_blank">Archiwum</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Uczeń z pasją</a></li>
+                  <li class="dropdown-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem placeat doloremque labore facere est nesciunt aspernatur voluptates ullam, enim quaerat! Libero molestias commodi nemo inventore debitis, adipisci quibusdam voluptate odit.</li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Sport</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Kreatywnie zakręceni</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Kreatywny fryzjer</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">Kącik UNICEF</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" target="_blank">DBI</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://m000468.molnet.mol.pl/" target="_blank">Biblioteka</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="offcanvas" href="#accessibility" role="button" aria-controls="offcanvasExample">Dostępność</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="offcanvas" href="#partnership" role="button" aria-controls="offcanvasExample">Działamy z</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Szukaj..." aria-label="Search" maxlength="22">
+              <button class="btn btn-outline-success" type="submit">Szukaj</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="partnership" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Działamy razem z:</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>Szkoła współpracuje z wieloma instucjami oraz zakładami pracy dzięki ,którym uczniowie mają możliwość rozwoju i odbywać praktyki.</p>
+          <div class="canvasimages">
+              <img src="/Images/logo-powiat.png" class="LP" alt="Logo Powiatu Stalowowolskiego">
+              <img src="/Images/logoKO.png" class="KO" alt="Logo Podkarpackiego Kuratorium Oświaty w Rzeszowie">
+              <img src="/Images/1-1.png" alt="">
+              <img src="/Images/1-2.png" alt="">
+              <img src="/Images/1-3.png" alt="">
+              <img src="/Images/2-1.png" alt="">
+              <img src="/Images/2-2.png" alt="">
+              <img src="/Images/2-3.png" alt="">
+              <img src="/Images/3-1.png" alt="">
+              <img src="/Images/3-2.png" alt="">
+              <img src="/Images/3-3.png" alt="">
+              <img src="/Images/4-1.png" alt="">
+              <img src="/Images/4-2.png" alt="">
+              <img src="/Images/5-1.png" alt="">
+              <img src="/Images/5-2.png" alt="">
+              <img src="/Images/5-3.png" alt="">
+              <img src="/Images/6-1.png" alt="">
+              <img src="/Images/6-2.png" alt="">
+              <img src="/Images/7.png" alt="">
+              <img src="/Images/8-1.png" alt="">
+              <img src="/Images/8-2.png" alt="">
+              <img src="/Images/9-1.png" alt="">
+              <img src="/Images/9-2.png" alt="">
+              <img src="/Images/9-3.png" alt="">
+              <img src="/Images/9-4.png" alt="">
+              <img src="/Images/10-1.png" alt="">
+              <img src="/Images/10-2.png" alt="">
+              <img src="/Images/10-3.png" alt="">
+              <img src="/Images/11-1.png" alt="">
+              <img src="/Images/11-2.png" alt="">
+              <img src="/Images/11-3.png" alt="">
+              <img src="/Images/11-4.png" alt="">
+              <img src="/Images/12-1.png" alt="">
+              <img src="/Images/12-2.png" alt="">
+              <img src="/Images/12-3.png" alt="">
+              <img src="/Images/12-4.png" alt="">
+              <img src="/Images/12-5.png" alt="">
+              <img src="/Images/13-1.png" alt="">
+              <img src="/Images/13-2.png" alt="">
+              <img src="/Images/13-3.png" alt="">
+              <img src="/Images/14-1.png" alt="">
+              <img src="/Images/15-1.png" alt="">
+              <img src="/Images/15-2.png" alt="">
+              <img src="/Images/16-1.png" alt="">
+              <img src="/Images/16-2.png" alt="">
+              <img src="/Images/16-3.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="accessibility" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Ustawienia Dostępności:</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <button class="accessibility-button" onclick="toggleUnderline()">Podkreśl link</button><br>
+          <button class="accessibility-button" onclick="toggleBigger()">Większy rozmiar</button><br>
+          <button class="accessibility-button" onclick="toggleSmaller()">Mniejszy rozmiar</button><br>
+          <button class="accessibility-button" onclick="toggleGarish()">Jaskrawe tło</button><br>
+          <button class="accessibility-button" onclick="toggleDark()">Ciemne tło</button>
+        </div>
+      </div>
+
+      <div class="container-select">
+       <select name='naucz' class='lista' id="lista">
+        <option selected='selected' disabled='disabled'>wybierz nauczyciela</option>
+  <option value="piątek o godz. 10:15 - 11:15 w sali 26w">Jan Bąk</option>
+  <option value="piątek o godz. 14:00 - 15:00 w sali pokój nauczycielski/ sala 104">Wiesław Bednarczyk</option>
+  <option value="środę o godz. 11:15 - 12:10 w sali pokój nauczycielski">Aneta Bedońska</option>
+  <option value="środę o godz. 13:00 - 13:45 w sali pokój nauczycielski">Mariusz Bedoński</option>
+  <option value="środę o godz. 15:25 - 16:25 w sali 15w">Grzegorz Bieleń</option>
+  <option value="środę o godz. 09:30 - 10:30 w sali 208">Lidia Bieleń</option>
+  <option value="czwartek o godz. 09:15 - 10:15 w sali 107">Monika Bis</option>zwartek
+  <option value="wtorek o godz. 11:05 - 12:05 w sali sala gimnastyczna">Robert Bołotiuch</option>
+  <option value="czwartek o godz.  12:05 - 13:05 w sali 21w">Mariusz Bożek</option>
+  <option value="wtorek o godz. 09:30 - 10:30 w sali sala gimnastyczna">Tomasz Brud</option>
+  <option value="czwartek o godz. 11:15 - 12:15 w sali 65w">Katarzyna Budkowska</option>
+  <option value="wtorek o godz. 11:00 - 12:00 w sali 110">Jerzy Budkowski</option>
+  <option value="czwartek o godz. 10:15 - 11:15 w sali sala gimnastyczna">Marek Butryn</option>
+  <option value="środę o godz. 11:05 - 12:05 w sali 206">Roman Ciba</option>
+  <option value="wtorek o godz. 14:40 - 15:40 w sali 31w">Grzegorz Cygan</option>
+  <option value="środę o godz. 13:00 - 15:00  w sali 204">Janusz Czernecki</option>
+  <option value="poniedziałek o godz. 10:15 - 11:15 w sali pokój nauczycielski">Dorota Czerska-Pawełek</option>
+  <option value="czwartek o godz. 13:50 - 14:50  w sali 104">Krzysztof Czerwiński</option>
+  <option value="wtorek o godz. 10:15 - 11:15  w sali 29w">Dariusz Domagała</option>
+  <option value="poniedziałek o godz. 07:00 - 07:45  w sali 4w">Józef Drąg</option>
+  <option value="wtorek o godz. 10:15 - 11:15  w sali 108">Anna Dul</option>
+  <option value="czwartek o godz. 09:30 - 10:30  w sali 109">Konrad Durma</option>
+  <option value="piątek o godz. 08:35 - 09:35  w sali 212">Anna Gadomska</option>
+  <option value="czwartek o godz. 12:10 - 12:55  w sali 59w">Dariusz Gawron</option>
+  <option value="">Izabela Gierak</option>
+  <option value="poniedziałek o godz. 08:00 - 09:00 w sali 5">Anna Glanert</option>
+  <option value="piątek o godz. 09:30 - 10:30  w sali biblioteka">Paweł Głasek</option>
+  <option value="wtorek o godz. 09:30 - 10:30 w sali sala gimnastyczna">Paweł Głaz</option>
+  <option value="piątek o godz. 12:05 - 13:00 w sali pokój nauczycielski">Barbara Główka-Syp</option>
+  <option value="poniedziałek o godz. 13:45 - 14:45  w sali 5w2">Mirosław Gongolewski</option>
+  <option value="czwartek o godz. 11:30 - 12:30  w sali 110">Władysław Goździela</option>
+  <option value="czwartek o godz. 07:45 - 08:45  w sali 18w">Ireneusz Iwan</option>
+  <option value="poniedziałek o godz. 10:30 - 11:30  w sali 18w">Katarzyna Iwan</option>
+  <option value="środę o godz. 09:30 - 10:14 w sali 52w">Maria Jabłońska</option>
+  <option value="wtorek o godz. 16:30 - 17:30 w sali sala gimnastyczna">Agnieszka Janiec</option>
+  <option value="poniedziałek o godz. 12:05 - 13:05  w sali 100">Agnieszka Jarosz</option>
+  <option value="piątek o godz. 07:00 - 08:40 w sali 9w">Paweł Jędryka</option>
+  <option value="poniedziałek o godz. 13:00 - 14:00  w sali 6wc">Piotr Jurczyk</option>
+  <option value="">Mirosław Juśkiewicz</option>
+  <option value="środę o godz. 10:15 - 11:15  w sali 8w">Teresa Kaszuba</option>
+  <option value="piątek o godz. 12:55 - 13:55 w sali 202">Mariusz Kobylarz</option>
+  <option value="piątek o godz. 08:35 - 09:35 w sali 203">Alicja Konopelska</option>
+  <option value="piątek o godz. 09:30 - 10:30 w sali pokój nauczycielski">Daniel Kosierb</option>
+  <option value="poniedziałek o godz. 09:25 - 10:25 w sali 25w">Alicja Kotwica</option>
+  <option value="poniedziałek o godz. 09:00 - 10:00 w sali CKZ - Sekretariat">Marcin Kowalik</option>
+  <option value="czwartek o godz. 12:00 - 13:00  w sali 7">Dariusz Kozdra</option>
+  <option value="poniedziałek o godz. 11:20 - 12:20 w sali 4">Justyna Krawiec</option>
+  <option value="poniedziałek o godz. 10:15 - 11:15 w sali pokój nauczycielski">Piotr Kręcichwost</option>
+  <option value="wtorek o godz. 07:45 - 08:45 w sali 105">Andrzej Krudysz</option>
+  <option value="">Henryk Makolus</option>
+  <option value="czwartek o godz. 09:30 - 10:30 w sali pokój nauczycielski/sala gimnastyczna">Marzena Marek-Godek</option>
+  <option value="piątek o godz. 13:00 - 14:00 w sali 30w">Wanda Matejko-Czechura</option>
+  <option value="czwartek o godz. 12:00 - 13:00 w sali 21w">Jacek Matyka</option>
+  <option value="środę o godz. 09:30 - 10:30  w sali sala gimnastyczna">Witold Muszyński</option>
+  <option value="piątek o godz. 07:00 - 08:00 w sali 5">Beata Myszka</option>
+  <option value="środę o godz. 09:30 - 10:30  w sali 58w">Waldemar Myśliwiec</option>
+  <option value="środę o godz.  07:45 - 08:35  w sali 112">Katarzyna Nitkiewicz</option>
+  <option value="wtorek o godz. 11:15 - 12:15 w sali 109">Anna Olszewska</option>
+  <option value="piątek o godz. 12:10 - 12:55 w sali 27w">Zbigniew Owczarek</option>
+  <option value="wtorek o godz. 12:55 - 13:55 w sali 5w1">Lucjan Paruch</option>
+  <option value="">Renata Pawnik-Nowakowska</option>
+  <option value="wtorek o godz. 08:40 - 09:25 w sali 34w">Anna Pikula</option>
+  <option value="poniedziałek o godz. 14:00 - 15:00 w sali 53w">Krzysztof Raczyk</option>
+  <option value="">Roman Ramocki</option>
+  <option value="czwartek o godz. 18:00 - 19:00 w sali sala gimnastyczna 3">Piotr Rochowski</option>
+  <option value="poniedziałek o godz. 11:15 - 12:15 w sali 10w">Gabriela Rubas-Dębska</option>
+  <option value="poniedziałek o godz. 10:15 - 11:15 w sali 31w">Damian Rycerz</option>
+  <option value="środę o godz. 08:40 - 09:25 w sali 109">Aleksandra Siembida</option>
+  <option value="">Anna Siembida</option>
+  <option value="środę o godz. 12:55 - 13:55 w sali 33w">Marcin Socha</option>
+  <option value="piątek o godz. 13:45 - 14:45 w sali 202">Małgorzata Stadnik</option>
+  <option value="środę o godz. 12:00 - 13:00 w sali 19">Edward Stępień</option>
+  <option value="poniedziałek o godz. 08:40 - 09:35 w sali 101">Barbara Surma</option>
+  <option value="wtorek o godz. 08:40 - 09:25 w sali 8w">Krzysztof Szczęch</option>
+  <option value="czwartek o godz. 07:00 - 08:00 w sali 116">Agnieszka Szewczyk</option>
+  <option value="czwartek o godz. 11:20 - 12:10 w sali 14w">Elżbieta Tokarczyk</option>
+  <option value="">Wiesław Trawiński</option>
+  <option value="poniedziałek o godz. 11:15 - 12:15 w sali 28">Beata Wermińska</option>
+  <option value="piątek o godz. 09:30 - 10:30 w sali 54">Renata Wojtala-Lamplugh</option>
+  <option value="środę o godz. 07:30 - 08:30 w sali 6w">Mirosław Wołoszyn</option>
+  <option value="poniedziałek o godz. 07:30 - 08:30 w sali 216">Anna Woś</option>
+  <option value="środę o godz. 09:30 - 10:30 w sali 21w">Wiktor Woźniak</option>
+  <option value="poniedziałek o godz. 06:50 - 07:50 w sali 35">Aneta Wójcik</option>
+  <option value="poniedziałek o godz. 14:45 - 15:45 w sali 55w">Piotr Żak</option>
+  <option value="poniedziałek o godz. 12:05 - 13:00 w sali 7w">Stanisław Życzyński</option>
+  <option value="piątek o godz. 12:05 - 13:05 w sali 115">Joanna Marszałek</option>
+  <option value="poniedziałek o godz. 11:15 - 12:10 w sali pokój nauczycielski">Marek Dębski</option>
+  <option value="poniedziałek o godz. 13:30 - 14:30 w sali 210">Agnieszka Hepnar</option>
+  <option value="środę o godz.  07:50 - 08:35 w sali pokój nauczycielski">Elżbieta Idec</option>
+  <option value="">Małgorzata Maziarz</option>
+  <option value="">Damian Tracz</option>
+  <option value="poniedziałek o godz. 10:20 - 11:20 w sali 107">Andrzej Wnuk</option>
+  <option value="piątek o godz. 08:00 - 09:00 w sali 110">Marta Galek</option>
+  
+</select>
+  <button onclick="choose()" class="btn-choose">Wybierz</button><br>
+    <p id="pole"></p>
+
+      </div>
+
+      
+         
+            <script src="/script.js"></script>
+            
+            <script>
+
+            function choose() {
+                var select = document.getElementById("lista");
+                var godzina = select.value;
+                var osoba = select.options[select.selectedIndex].text;
+                document.getElementById("pole").innerHTML = osoba + " " + "jest dostępna/y w" + " " + godzina ;
+              }
+
+            </script>
+            
+          
+      <footer class="footer" name="contact">
+        <div class="container">
+          Copyright © 2024 Centrum Edukacji Zawodowej. Wszelkie prawa zastrzeżone.
+            <div class="row">
+
+                <div class="col">
+                    <h5>Kontakt</h5>
+                    <ul>
+                        <li>Telefon: 15 8134854</li>
+                        <li>Telefon: 15 8428300</li>
+                        <li>Ulica: Kwiatkowskiego 1</li>
+                        <li>Miasto: Stalowa Wola</li>
+                        <li>Kod pocztowy: 37-450</li>
+                        <li>Email: <a href="mailto:sekretariat-cez@cezstalowawola.pl" class="mail">sekretariat-cez@cezstalowawola.pl</a></li>
+                        <li>NIP: 865-10-35-782</li>
+                    </ul>
+                </div>
+                <div class="col">
+                  <h5>Lokalizacja</h5>
+                  <div id="map"></div>
+              </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
